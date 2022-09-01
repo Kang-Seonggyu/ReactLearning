@@ -7,6 +7,7 @@ import ChildComponent2 from "./03/ChildComponent2";
 import DefaultPropsComponent from "./03/DefaultPropsComponent";
 import ChildProperty from "./03/ChildProperty";
 import './App.css';
+import StateExample from "./03/StateExample";
 
 var cart = { name : '도서', price : 1500 };
 var getTotal = function(cart) {
@@ -32,6 +33,7 @@ class App extends React.Component {
                 <ChildProperty>
                     <div><button>자식 노드</button></div>
                 </ChildProperty>
+                <StateExample />
             </div>
         );
     }
