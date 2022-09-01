@@ -19,7 +19,7 @@ class StateExample extends React.Component {
         //state 변경
         this.setState({
             loading : false,
-            formData : data + formData,
+            formData : data + ' / ' + formData,
         });
         // this.state.loading 은 현재 true 입니다.
         console.log('loading값', this.state.loading);
@@ -29,8 +29,8 @@ class StateExample extends React.Component {
         return (
             <div>
                 {/* state 데이터는 this.state로 접근 가능합니다. */}
-                <span>로딩중 : {String(this.state.loading)}</span>
-                <span>결과 : {this.state.formData}</span>
+                <span>로딩중 : {String(this.state.loading)} </span>
+                <span> 결과 : {this.state.formData}</span>
             </div>
         );
     }

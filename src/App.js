@@ -17,7 +17,7 @@ var cart = { name : '도서', price : 1500 };
 var getTotal = function(cart) {
     return cart.price + "원";
 };
-
+/* // App 1 증가 버튼 함수
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -29,31 +29,41 @@ class App extends React.Component {
     }
     render() {
         return (
-            /*<div className="body">
-                <img src="http://www.easyspub.co.kr/images/logo_footer.png" />
-                <TodaysPlan />
-                <PropsComponent name="두잇 리액트" />
-                <MyComponent name="message" />
-                <div>안녕하세요</div>
-                <div><b>지루할 때 :</b><BooleanComponent bored /></div>
-                <div><b>즐거울 때 :</b><BooleanComponent /></div>
-                <ChildComponent2
-                    objValue={{age : 20 }}
-                    requiredStringValue="문자"
-                />
-                <DefaultPropsComponent />
-                <ChildProperty>
-                    <div><button>자식 노드</button></div>
-                </ChildProperty>
-                <StateExample />
-                <LifecycleExample />
-            </div> */
             <div>
                 <div><Counter count={this.state.count} /></div>
                 <div><NewCounter count={this.state.count} /></div>
                 <button onClick={this.resetCount}>{this.state.count +10}으로 초기화</button>
             </div>
+        );
+    }
+}
+ */
 
+
+
+// 앞 내용 총괄.
+class App extends React.Component {
+    render() {
+        return(
+        <div className="body">
+            <img src="http://www.easyspub.co.kr/images/logo_footer.png" />
+            <TodaysPlan />
+            <PropsComponent name="두잇 리액트" />
+            <MyComponent name="message" />
+            <div>안녕하세요</div>
+            <div><b>지루할 때 :</b><BooleanComponent amooguna /></div>
+            <div><b>즐거울 때 :</b><BooleanComponent /></div>
+            <ChildComponent2
+                objValue={{age : 20 }}
+                requiredStringValue="문자"
+            />
+            <DefaultPropsComponent />
+            <ChildProperty>
+                <div><button>자식 노드</button></div>
+            </ChildProperty>
+            <StateExample />
+            <LifecycleExample />
+        </div>
         );
     }
 }
