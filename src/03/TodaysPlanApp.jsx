@@ -1,3 +1,4 @@
+import React from "react";
 import TodaysPlan from "./TodaysPlan";
 
 class TodaysPlanApp extends React.Component {
@@ -13,3 +14,5 @@ class TodaysPlanApp extends React.Component {
         );
     }
 }
+
+export default TodaysPlanApp;

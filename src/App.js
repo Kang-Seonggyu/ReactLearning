@@ -12,6 +12,10 @@ import LifecycleExample from "./03/LifecycleExample";
 import Counter from "./03/Counter";
 import newCounter from "./03/NewCounter";
 import NewCounter from "./03/NewCounter";
+import ListExample from "./03/ListExample";
+import TodaysPlanApp from "./03/TodaysPlanApp";
+import Todolist from "./03/Todolist";
+import MakeRadio from "./03/MakeRadio";
 
 var cart = { name : '도서', price : 1500 };
 var getTotal = function(cart) {
@@ -59,10 +63,16 @@ class App extends React.Component {
             />
             <DefaultPropsComponent />
             <ChildProperty>
-                <div><button>자식 노드</button></div>
+                <div>
+                    <button>자식 노드</button>
+                </div>
             </ChildProperty>
             <StateExample />
             <LifecycleExample />
+            <TodaysPlanApp />
+            <ListExample />
+            <Todolist />
+            <MakeRadio />
         </div>
         );
     }
