@@ -9,7 +9,8 @@ class Counter extends React.Component {
     }
     increaseCount() {
         //state 변경
-        this.setState( count => {count : count + 1});
+        // this.setState( count => {count : count + 1});
+        console.log(`뭐야?`);
     }
     render() {
         return (

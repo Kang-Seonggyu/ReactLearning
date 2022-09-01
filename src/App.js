@@ -8,6 +8,7 @@ import DefaultPropsComponent from "./03/DefaultPropsComponent";
 import ChildProperty from "./03/ChildProperty";
 import './App.css';
 import StateExample from "./03/StateExample";
+import LifecycleExample from "./03/LifecycleExample";
 
 var cart = { name : '도서', price : 1500 };
 var getTotal = function(cart) {
@@ -17,7 +18,7 @@ var getTotal = function(cart) {
 class App extends React.Component {
     render() {
         return (
-            <div className="body">
+            /*<div className="body">
                 <img src="http://www.easyspub.co.kr/images/logo_footer.png" />
                 <TodaysPlan />
                 <PropsComponent name="두잇 리액트" />
@@ -34,7 +35,12 @@ class App extends React.Component {
                     <div><button>자식 노드</button></div>
                 </ChildProperty>
                 <StateExample />
+            </div> */
+            <div>
+                뭐야?
+                <LifecycleExample />
             </div>
+
         );
     }
 }
