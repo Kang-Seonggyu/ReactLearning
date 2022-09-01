@@ -1,0 +1,20 @@
+// 일반 함수를 사용한 예
+
+handleData (data) {
+    this.setState(function(prevState) {
+        const newState = {
+            loading : false,
+            formData : data + prevState.formData,
+        };
+        return newState;
+    });
+}
+
+// 화살표 함수를 사용한 예
+
+handleData (data) {
+    this.setState(prevState => ({
+        loading : false,
+        formData : data + prevState.formData
+    });
+}
