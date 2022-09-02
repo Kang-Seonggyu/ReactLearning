@@ -20,10 +20,11 @@ import CounterApp from "./03/CounterApp";
 import Counter2 from "./03/Counter2";
 import ScrollSpy from "./03/ScrollSpy";
 import Counter3 from "./03/Counter3";
+import Input from "./03/Input";
 
 var cart = { name : '도서', price : 1500 };
-var getTotal = function(cart) {
-    return cart.price + "원";
+var getTotal = function(param) {
+    return param.price + "원";
 };
 /* // App 1 증가 버튼 함수
 class App extends React.Component {
@@ -59,6 +60,7 @@ class App extends React.Component {
             <PropsComponent name="두잇 리액트" />
             <MyComponent name="message" />
             <div>안녕하세요</div>
+            <div>{cart.name}의 가격은 {getTotal(cart)}입니다.</div>
             <div><b>지루할 때 :</b><BooleanComponent amooguna /></div>
             <div><b>즐거울 때 :</b><BooleanComponent /></div>
             <ChildComponent2
@@ -84,6 +86,7 @@ class App extends React.Component {
             <Counter2 />
             <ScrollSpy>이 영역이 화면 상에 있으면 콘솔창에 Enter 아니면 Exit. </ScrollSpy>
             <Counter3 />
+            <Input />
         </div>
         );
     }
