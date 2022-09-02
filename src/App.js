@@ -16,6 +16,10 @@ import ListExample from "./03/ListExample";
 import TodaysPlanApp from "./03/TodaysPlanApp";
 import Todolist from "./03/Todolist";
 import MakeRadio from "./03/MakeRadio";
+import CounterApp from "./03/CounterApp";
+import Counter2 from "./03/Counter2";
+import ScrollSpy from "./03/ScrollSpy";
+import Counter3 from "./03/Counter3";
 
 var cart = { name : '도서', price : 1500 };
 var getTotal = function(cart) {
@@ -72,7 +76,14 @@ class App extends React.Component {
             <TodaysPlanApp />
             <ListExample />
             <Todolist />
-            <MakeRadio />
+            <MakeRadio id="R1" />
+            <div></div>
+            <MakeRadio id="R2" />
+            <Counter />
+            <CounterApp />
+            <Counter2 />
+            <ScrollSpy>이 영역이 화면 상에 있으면 콘솔창에 Enter 아니면 Exit. </ScrollSpy>
+            <Counter3 />
         </div>
         );
     }
