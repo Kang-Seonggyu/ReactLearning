@@ -15,7 +15,17 @@
 <script type="text/babel">
     // 작업할 영역 지정
     const test = document.getElementById("test");
-
+    // CSS
+    const styleTest = {
+      display : "inline",
+      background : "lightblue",
+    }
+    const boxStyle = {
+      border : "1px solid black",
+      textAlign : "center",
+      margin : "10px"
+    }
+    // 컴포넌트 ? 만들기
     function Title () {
           return (
                 <h2
@@ -25,8 +35,12 @@
                 </h2>
           )
         } 
+    
     const Logo = () => (
+        <div >
             <img src="./osd_logo.png" />
+            <h1 style={styleTest}>강성규</h1>
+        </div>
     );
     /*
     const MouseClickTotal = () => (
@@ -61,7 +75,7 @@
       }
 
       return (
-        <div>
+        <div style={boxStyle}>
           <h3>Total Clicked : {counter}</h3>
           <button onClick={upClicked}>Count Up</button>
           <button onClick={downClicked}>Count Down</button>
@@ -69,12 +83,24 @@
       )
       
     }
-
+    function App() {
+      return (
+        <div style={boxStyle}>
+          <h1>Super Converter</h1>
+          <label for="Minutes">Minutes</label>
+          <input id="Minutes" placeholder="Minutes" type="number" />
+          
+          <label for="Hours">Hours</label>
+          <input id="Hours" placeholder="Hours" type="number" />
+        </div>
+      )
+    }
     const TestView = (
-      <div>
+      <div style={boxStyle}>
         <Title />
         <Logo />
         <MouseClick />
+        <App />
         <button>소문자는 jsx에서 그냥 태그 !</button>
       </div>
     )
