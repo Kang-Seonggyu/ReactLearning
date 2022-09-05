@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test"></div>
+</body>
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    // 작업할 영역 지정
+    const test = document.getElementById("test");
+
+    function Title () {
+          return (
+                <h2
+                    id="Title"
+                    onMouseEnter={ () => console.log("Mouse Entered")}>
+                  This is Title
+                </h2>
+          )
+        } 
+    const Logo = () => (
+            <img src="./osd_logo.png" />
+    );
+    /*
+    const MouseClickTotal = () => (
+      <div>
+        Total Click : {counter}  
+      </div>
+    )
+    const Btn = () => (<button 
+                    id="btnClick" 
+                    style = {{
+                      backgroundColor : "lightgreen",
+                    }}
+                    onClick = { () => 
+                      {console.log("MouseClicked"),
+                      counter = counter + 1 }
+                    } >
+        Click Me</button>);
+    */
+
+    
+    function MouseClick() {
+      // [변수, 함수] = React.useState( 변수의 초기값 ) 
+      const [counter, setCounter] = React.useState(0);
+      const upClicked = () => {
+        // 혹여나 나중에 막히는 일 생길 수 있음. 아래와 같이 함수 형태로 쓰는게 좋음.
+        //setCounter(counter + 1);
+        setCounter((current) => current +1);
+      }
+      const downClicked = () => {
+        //setCounter(counter - 1);
+        setCounter((current) => current -1);
+      }
+
+      return (
+        <div>
+          <h3>Total Clicked : {counter}</h3>
+          <button onClick={upClicked}>Count Up</button>
+          <button onClick={downClicked}>Count Down</button>
+        </div>
+      )
+      
+    }
+
+    const TestView = (
+      <div>
+        <Title />
+        <Logo />
+        <MouseClick />
+        <button>소문자는 jsx에서 그냥 태그 !</button>
+      </div>
+    )
+    ReactDOM.render(TestView, test);
+  </script>
+</html>
