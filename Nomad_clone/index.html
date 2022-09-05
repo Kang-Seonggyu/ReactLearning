@@ -88,7 +88,7 @@
       
     }
 
-    function App() {
+    function Minute_And_Hour() {
       const [amount, setAmount] = React.useState(0);
       const [flipped, setFlipped] = React.useState(false);
       const valueChanged = (event) => {
@@ -104,7 +104,7 @@
 
       return (
         <div style={boxStyle}>
-          <h1>Super Converter</h1>
+          <h2>Time Converter</h2>
           <div>
             <label htmlFor="Minutes">Minutes : </label>
             <input 
@@ -129,11 +129,55 @@
             />
           </div>
           <button onClick={reset}>Reset</button>
-          <button onClick={flip}>Flip</button>
+          <button onClick={flip}>{flipped ? "Minute":"Hour"}</button>
 
         </div>
       )
     }
+    
+    function KM_TO_Mile() {
+      const [amount, setAmount] = React.useState(0);
+      const [flipped, setFlipped] = React.useState(false);
+      const valueChanged = (event) => {
+        setAmount(event.target.value)
+      }
+      const reset = () => {
+        setAmount(0)
+      }
+      const flip = () => {
+        setFlipped((current) => !current);
+        reset()
+      }
+
+      return (
+        <div style={boxStyle}>
+          <h2>Distance Converter</h2>
+          <div>
+
+          </div> 
+        </div>
+      )
+    }
+    
+    function App() {
+      const [index, setIndex] = React.useState("0");
+      const onSelect = (event) => {
+        setIndex(event.target.value)
+      }
+      return (
+        <div style={boxStyle}>
+          <h1>Super Converter</h1>
+          <select value={index} onChange={onSelect}>
+            <option value="0">Minute & Hour </option>
+            <option value="1">KM & Mile </option>
+          </select>
+          { index === "0" ? <Minute_And_Hour />: null}
+          { index === "1" ? <KM_TO_Mile />: null}
+        </div>
+      )
+    }
+
+    // 화면에 어떤 것을 출력할 것인가를 설정.
     const TestView = (
       <div style={centerAlign}>
         <Title />
