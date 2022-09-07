@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+// import "./style.css" //전체 스타일을 적용할 때는 이렇게 사용.
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
