@@ -120,7 +120,7 @@
           <div>
             <label htmlFor="Hours">Hours : </label>
             <input 
-              value={ flipped ? amount : Math.round(amount / 60)} 
+              value={ flipped ? amount : Math.floor(amount / 60)} 
               id="Hours" 
               placeholder="Hours" 
               type="number" 
