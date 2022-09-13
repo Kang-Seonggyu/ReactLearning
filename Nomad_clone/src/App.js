@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CoinChange from "./JS&CSS/CoinChange";
 import MovieDetail from "./JS&CSS/MovieDetail";
 import Movielist from "./JS&CSS/Movielist";
+import "./style.css";
 
 function App() {
     return (
