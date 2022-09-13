@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+//import HideAndShow from './JS&CSS/HideAndShow';
+//import Todolist from './JS&CSS/ToDo';
+//import Title from './JS&CSS/Title';
+import CoinChange from './JS&CSS/CoinChange';
+import Movielist from './JS&CSS/movielist'
 // import "./style.css" //전체 스타일을 적용할 때는 이렇게 사용.
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <div>
+      <CoinChange />
+      <Movielist />
+    </div>
+    
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
